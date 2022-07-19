@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__title {
+  font-weight: 700;
+  font-size: 1.75rem;
+}
+.header__title span {
+  color: #9F0013;
+}
+.header .menu__list {
+  display: flex;
+  gap: 24px;
+}
+.header .menu__item {
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+}
+.header .menu__item_active {
+  color: #9F0013;
+}
+.header .menu__item:not(:first-of-type)::before {
+  content: "/";
+  color: black;
+  position: absolute;
+  left: -16px;
+}
+.header .menu__item:hover {
+  text-decoration: underline;
+}
+
+.character {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+.character__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+}
+.character__text {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.1rem;
+}
+
+.random {
+  margin-top: 54px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.random__section {
+  padding: 40px 35px 35px 35px;
+}
+.random .character {
+  display: flex;
+  box-shadow: none;
+  display: flex;
+}
+.random .character__img {
+  min-width: 180px;
+  margin-right: 30px;
+}
+.random .character__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.random .character__title {
+  margin-bottom: 13px;
+}
+.random__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.random .description {
+  position: relative;
+  background-color: #232222;
+}
+.random__text {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  max-width: 373px;
+}
+.random__text:last-of-type {
+  margin-top: 41px;
+}
+.random__choose-another .button {
+  margin-top: 17px;
+}
+.random__decoration {
+  position: absolute;
+  right: -35px;
+  bottom: 14px;
+  z-index: 1;
+}
+
+.description__text {
+  max-width: 265px;
+}
+
+.buttons {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.button {
+  border: none;
+  padding: 11px 0;
+  width: 101px;
+  position: relative;
+  overflow: hidden;
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: transparent;
+  z-index: 2;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out 0s;
+}
+.button:hover {
+  transform: translate(0, -3px);
+}
+.button:active {
+  transform: translate(0, 0);
+}
+.button::after {
+  content: "";
+  width: 105px;
+  height: 83px;
+  position: absolute;
+  left: -2px;
+  bottom: -22px;
+  transform: rotate(-45deg);
+  z-index: -1;
+  background-color: #9F0013;
+}
+.button_primary::after {
+  background-color: #9F0013;
+}
+.button_secondary::after {
+  background-color: #5C5C5C;
+}
