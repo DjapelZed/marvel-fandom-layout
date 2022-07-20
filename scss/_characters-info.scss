@@ -3,6 +3,7 @@
     padding: 25px;
     box-shadow: $box-shadow;
     height: fit-content;
+    background-color: #fff;
     &__top {
         display: flex;
         gap: 25px;
@@ -31,7 +32,6 @@
         margin-bottom: 10px;
     }
 }
-
 
 .comics {
     &__title {

@@ -9,19 +9,21 @@
 body {
     font-family: 'Roboto Condensed', sans-serif;
     position: relative;
-}
-.wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
     &::after {
         content: "";
         background-image: url("../img/decor.png");
         width: 467px;
         height: 372px;
+        z-index: -1;
         position: absolute;
         bottom: 0;
         right: 0;
     }
+}
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    
 }
 
 .character {
