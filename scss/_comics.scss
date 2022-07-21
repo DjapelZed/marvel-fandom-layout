@@ -4,7 +4,6 @@
         grid-template-columns: repeat(4, 1fr);
         column-gap: 67px;
         row-gap: 55px;
-        margin-top: 50px;
     }
 
     &__button {
@@ -39,5 +38,55 @@
     &__price {
         margin-top: 5px;
         color: #00000099;
+    }
+}
+
+.comics-item {
+    display: flex;
+    
+    &__img img{
+        min-width: 293px;
+    }
+
+    &__content {
+        width: 100%;
+        margin-left: 50px;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        max-width: 550px;
+        font-size: 1.375rem;
+        font-weight: 700;
+    }
+
+    &__back {
+        min-width: 80px;
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+
+    &__description {
+        max-width: 550px;
+        margin-top: 25px;
+        margin-bottom: 40px
+    }
+
+    &__info div{
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__price {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $accent-color;
     }
 }
