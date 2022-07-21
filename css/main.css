@@ -345,10 +345,15 @@ select {
   font-size: 1.375rem;
   font-weight: 700;
 }
-.comics-item__back {
+.comics-item__back a {
+  text-decoration: none;
+  color: #000;
   min-width: 80px;
   font-weight: 700;
   font-size: 1.2rem;
+}
+.comics-item__back a:hover {
+  text-decoration: underline;
 }
 .comics-item__description {
   max-width: 550px;

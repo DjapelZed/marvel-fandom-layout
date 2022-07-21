@@ -43,7 +43,7 @@
 
 .comics-item {
     display: flex;
-    
+
     &__img img{
         min-width: 293px;
     }
@@ -66,10 +66,15 @@
         font-weight: 700;
     }
 
-    &__back {
+    &__back a{
+        text-decoration: none;
+        color: #000;
         min-width: 80px;
         font-weight: 700;
         font-size: 1.2rem;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     &__description {
