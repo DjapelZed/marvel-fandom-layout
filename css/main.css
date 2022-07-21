@@ -71,7 +71,6 @@ select {
   }
 }
 .header {
-  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -91,6 +90,10 @@ select {
   font-weight: 700;
   position: relative;
   cursor: pointer;
+}
+.header .menu__item a {
+  text-decoration: none;
+  color: inherit;
 }
 .header .menu__item_active {
   color: #9F0013;
@@ -264,11 +267,74 @@ select {
   font-size: 0.875rem;
 }
 
+.banner {
+  display: flex;
+  justify-content: space-between;
+  background-color: #232222;
+  padding: 0 25px 0 45px;
+  margin-top: 50px;
+  height: 100px;
+  position: relative;
+}
+.banner__title {
+  position: absolute;
+  left: 280px;
+  margin-top: 18px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #FFFFFF;
+}
+
+.comics__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 67px;
+       column-gap: 67px;
+  row-gap: 55px;
+  margin-top: 50px;
+}
+.comics__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+}
+
+.comics-card {
+  max-width: 225px;
+}
+.comics-card__link {
+  text-decoration: none;
+  color: #000;
+}
+.comics-card__image img {
+  width: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+.comics-card__title {
+  font-size: 0.875rem;
+  line-height: 1.1rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+.comics-card__title:hover {
+  text-decoration: underline;
+}
+.comics-card__price {
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 body {
   font-family: "Roboto Condensed", sans-serif;
   position: relative;
 }
-body::after {
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px;
+}
+.wrapper.decor::after {
   content: "";
   background-image: url("../img/decor.png");
   width: 467px;
@@ -277,11 +343,6 @@ body::after {
   position: absolute;
   bottom: 0;
   right: 0;
-}
-
-.wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
 .character {

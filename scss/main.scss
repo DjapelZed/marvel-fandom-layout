@@ -4,26 +4,31 @@
 @import "./button";
 @import "./random";
 @import "./characters-info";
+@import "./banner";
+@import "./comics";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
     position: relative;
-    &::after {
-        content: "";
-        background-image: url("../img/decor.png");
-        width: 467px;
-        height: 372px;
-        z-index: -1;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
+    
 }
 .wrapper {
     max-width: 1100px;
     margin: 0 auto;
-    
+    padding: 50px;
+    &.decor {
+        &::after {
+            content: "";
+            background-image: url("../img/decor.png");
+            width: 467px;
+            height: 372px;
+            z-index: -1;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
 }
 
 .character {
